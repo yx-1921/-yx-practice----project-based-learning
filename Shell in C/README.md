@@ -1,0 +1,1 @@
+gcc -o mybash main.c
