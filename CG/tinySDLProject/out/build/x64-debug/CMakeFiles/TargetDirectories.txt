@@ -1,5 +1,0 @@
-C:/Users/Administrator/source/repos/tinySDLProject/out/build/x64-debug/CMakeFiles/edit_cache.dir
-C:/Users/Administrator/source/repos/tinySDLProject/out/build/x64-debug/CMakeFiles/rebuild_cache.dir
-C:/Users/Administrator/source/repos/tinySDLProject/out/build/x64-debug/tinySDLProject/CMakeFiles/tinyProject.dir
-C:/Users/Administrator/source/repos/tinySDLProject/out/build/x64-debug/tinySDLProject/CMakeFiles/edit_cache.dir
-C:/Users/Administrator/source/repos/tinySDLProject/out/build/x64-debug/tinySDLProject/CMakeFiles/rebuild_cache.dir
