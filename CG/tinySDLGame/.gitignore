@@ -1,0 +1,11 @@
+# 3rdparty 依赖库（体积大，不入库，按需自行下载）
+tinySDLGame/3rdparty/
+
+# Visual Studio 本地配置缓存
+.vs/
+
+# Claude Code 项目本地配置
+.claude/
+
+# CMake 构建输出
+out/
