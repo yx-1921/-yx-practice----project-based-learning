@@ -1,3 +1,0 @@
-LRU
-LFU
-ARC
