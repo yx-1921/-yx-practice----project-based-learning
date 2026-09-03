@@ -142,7 +142,8 @@ public:
         }
 
 private:
-        void putInternal(Key key, Value value); // 添加缓存
+
+    void putInternal(Key key, Value value); // 添加缓存
     void getInternal(NodePtr node, Value& value); // 获取缓存
 
     void kickOut(); // 移除缓存中的过期数据

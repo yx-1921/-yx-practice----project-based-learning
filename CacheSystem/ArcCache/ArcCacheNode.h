@@ -26,7 +26,7 @@ public:
 
     // get
     Key getKey() const { return key_; }
-    Value getValue const { return value_; }
+    Value getValue() const { return value_; }
     size_t getAccessCount() const { return accessCount_; }
     
     // set

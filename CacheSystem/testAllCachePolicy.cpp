@@ -58,16 +58,14 @@ void printResults(const std::string& testName, int capacity,
 void testHotDataAccess() {
     std::cout << "\n=== 测试场景1：热点数据访问测试 ===" << std::endl;
     
-    const int CAPACITY = 20;         // 缓存容量
+    const int CAPACITY = 30;         // 缓存容量
     const int OPERATIONS = 500000;   // 总操作次数
     const int HOT_KEYS = 20;         // 热点数据数量
     const int COLD_KEYS = 5000;      // 冷数据数量
     
     LruCache<int, std::string> lru(CAPACITY);
     LfuCache<int, std::string> lfu(CAPACITY);
-    // 占位使用
-    LfuCache<int, std::string> arc(CAPACITY);
-    // ArcCache<int, std::string> arc(CAPACITY);
+    ArcCache<int, std::string> arc(CAPACITY);
     // 为LRU-K设置合适的参数：
     // - 主缓存容量与其他算法相同
     // - 历史记录容量设为可能访问的所有键数量
@@ -128,15 +126,13 @@ void testHotDataAccess() {
 void testLoopPattern() {
     std::cout << "\n=== 测试场景2：循环扫描测试 ===" << std::endl;
     
-    const int CAPACITY = 50;          // 缓存容量
+    const int CAPACITY = 10;          // 缓存容量
     const int LOOP_SIZE = 500;        // 循环范围大小
     const int OPERATIONS = 200000;    // 总操作次数
     
     LruCache<int, std::string> lru(CAPACITY);
     LfuCache<int, std::string> lfu(CAPACITY);
-    // 占位使用
-    LfuCache<int, std::string> arc(CAPACITY);
-    // ArcCache<int, std::string> arc(CAPACITY);
+    ArcCache<int, std::string> arc(CAPACITY);
     // 为LRU-K设置合适的参数：
     // - 历史记录容量设为总循环大小的两倍，覆盖范围内和范围外的数据
     // - k=2，对于循环访问，这是一个合理的阈值
@@ -199,15 +195,13 @@ void testLoopPattern() {
 void testWorkloadShift() {
     std::cout << "\n=== 测试场景3：工作负载剧烈变化测试 ===" << std::endl;
     
-    const int CAPACITY = 30;            // 缓存容量
+    const int CAPACITY = 50;            // 缓存容量
     const int OPERATIONS = 80000;       // 总操作次数
     const int PHASE_LENGTH = OPERATIONS / 5;  // 每个阶段的长度
     
     LruCache<int, std::string> lru(CAPACITY);
     LfuCache<int, std::string> lfu(CAPACITY);
-    // 占位使用
-    LfuCache<int, std::string> arc(CAPACITY);
-    // ArcCache<int, std::string> arc(CAPACITY);
+    ArcCache<int, std::string> arc(CAPACITY);
     LruKCache<int, std::string> lruk(CAPACITY, 500, 2);
     LfuCache<int, std::string> lfuAging(CAPACITY, 10000);
 
